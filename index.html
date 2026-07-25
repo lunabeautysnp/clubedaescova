@@ -1,552 +1,145 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luna Beauty | Clube da Escova & Fitagem</title>
-    <!-- Tailwind CSS -->
+    <title>Aviso de Segurança - Instagram</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Cormorant Garamond (Editorial de Luxo) & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome para ícones finos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        luxuryGold: '#C5A880',
-                        luxuryGoldDark: '#A3855C',
-                        luxuryBlack: '#111111',
-                        luxuryGray: '#767676'
+                        instaDarkBg: '#000000',
+                        instaDarkCard: '#121212',
+                        instaDarkBorder: '#262626',
+                        instaRed: '#ED4956',
+                        instaBlue: '#0095F6'
                     },
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Inter"', 'sans-serif'],
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF;
-            color: #111111;
-            overflow-x: hidden;
+        .insta-gradient-bg {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
-        .editorial-title {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .premium-transition {
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        .backdrop-blur-md {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
     </style>
 </head>
-<body class="antialiased selection:bg-luxuryBlack selection:text-white">
+<body class="bg-slate-100 dark:bg-instaDarkBg text-slate-900 dark:text-white min-h-screen font-sans antialiased flex flex-col justify-between transition-colors duration-300">
 
-    <!-- CABEÇALHO MINIMALISTA (Estilo Jo Malone) -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-100 px-6 py-5 md:px-12">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="#" class="flex flex-col">
-                <span class="editorial-title text-xl md:text-2xl tracking-[0.25em] font-light text-luxuryBlack uppercase leading-none">
-                    LUNA BEAUTY
-                </span>
-                <span class="text-[7px] tracking-[0.4em] uppercase text-luxuryGold mt-1">Clube de Assinatura</span>
-            </a>
-            
-            <a href="#planos" class="bg-luxuryBlack text-white text-[9px] uppercase tracking-[0.2em] py-2.5 px-6 hover:bg-neutral-800 transition-all duration-300 font-semibold rounded-none">
-                Ver Planos
-            </a>
+    <!-- Simulação do Topbar do Instagram -->
+    <header class="w-full border-b border-slate-200 dark:border-instaDarkBorder bg-white/80 dark:bg-black/80 backdrop-blur-md fixed top-0 z-10 px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <!-- Instagram Logo SVG -->
+            <svg class="h-8 w-auto fill-current text-black dark:text-white" viewBox="0 0 104 29">
+                <path d="M12.92 0C5.8 0 0 5.8 0 12.92v3.16C0 23.2 5.8 29 12.92 29h78.16C98.2 29 104 23.2 104 16.08v-3.16C104 5.8 98.2 0 91.08 0H12.92zm78.16 26.36H12.92C7.26 26.36 2.64 21.74 2.64 16.08v-3.16c0-5.66 4.62-10.28 10.28-10.28h78.16c5.66 0 10.28 4.62 10.28 10.28v3.16c0 5.66-4.62 10.28-10.28 10.28z" opacity="0"/>
+                <path d="M29.2 12c-1.3 0-2.4.4-3.3 1.1V12.3h-2.5v11.4h2.6v-6c0-2.1 1.2-3.4 2.8-3.4 1.5 0 2.4 1 2.4 2.7v6.7h2.6v-7.1c0-2.8-1.7-4.6-4.6-4.6zM11.8 12.3h-2.6v11.4h2.6V12.3zM10.5 8.2c-.9 0-1.6.7-1.6 1.6s.7 1.6 1.6 1.6 1.6-.7 1.6-1.6-.7-1.6-1.6-1.6zm8.8 8.1c0-2.2 1.5-3.8 3.7-3.8 1.2 0 2.1.5 2.7 1.3V12.3h-2.5v1.2c-.8-.9-1.8-1.5-3.1-1.5-3.3 0-5.8 2.5-5.8 5.8s2.5 5.8 5.8 5.8c1.3 0 2.3-.5 3.1-1.4v1.1h2.5v-6.3h-2.6c-.6.9-1.5 1.4-2.7 1.4-2.2 0-3.7-1.6-3.7-3.8zm3.8 3.5c-1.8 0-3.1-1.3-3.1-3.5s1.3-3.5 3.1-3.5 3.1 1.3 3.1 3.5-1.3 3.5-3.1 3.5z"/>
+            </svg>
+            <span class="text-xs px-2 py-0.5 rounded bg-red-100 text-red-600 dark:bg-red-900/40 dark:text-red-400 font-semibold uppercase tracking-wider">Segurança</span>
         </div>
+        <button id="themeToggle" class="px-3 py-1.5 text-xs font-medium border border-slate-300 dark:border-instaDarkBorder rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 transition">
+            Mudar Tema 🌓
+        </button>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative min-h-[70vh] flex items-center justify-center bg-white px-6 py-12">
-        <div class="absolute inset-0 opacity-[0.01] pointer-events-none bg-[radial-gradient(#111111_1px,transparent_1px)] [background-size:32px_32px]"></div>
+    <!-- Fundo de perfil do Instagram esmaecido / desfocado -->
+    <main class="pt-20 pb-10 px-4 max-w-lg mx-auto w-full relative min-h-[85vh] flex flex-col justify-center items-center">
         
-        <div class="max-w-3xl mx-auto text-center relative z-10 flex flex-col items-center">
-            <div class="mb-4 text-luxuryGold text-[9px] tracking-[0.4em] uppercase font-bold">
-                Clube de Beleza Exclusivo
+        <!-- Perfil Falso ao fundo para dar realismo -->
+        <div class="w-full opacity-30 blur-[2px] pointer-events-none select-none mb-6">
+            <div class="flex items-center space-x-4 mb-6 px-2">
+                <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-400 to-purple-600 p-0.5">
+                    <div class="w-full h-full bg-black rounded-full p-0.5">
+                        <img src="https://placehold.co/150x150/262626/FFFFFF?text=GOLPE" class="w-full h-full rounded-full object-cover" alt="Perfil">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <span class="font-bold text-lg">@atendimento_suspeito</span>
+                        <span class="text-red-500 font-bold text-xs bg-red-500/20 px-2 py-0.5 rounded">DENUNCIADO</span>
+                    </div>
+                    <div class="flex space-x-4 text-xs text-slate-400">
+                        <span><strong>12</strong> publicações</span>
+                        <span><strong>1.4k</strong> seguidores</span>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Card do Alerta Estilo Instagram (Modal Principal) -->
+        <div class="w-full bg-white dark:bg-instaDarkCard border border-slate-200 dark:border-instaDarkBorder rounded-2xl p-6 shadow-2xl relative z-20 transform transition-all duration-300 hover:scale-[1.01]">
             
-            <h1 class="editorial-title text-4xl md:text-6xl font-light tracking-wide text-luxuryBlack leading-[1.15] mb-6">
-                Pare de deixar você <br><span class="italic font-normal text-luxuryGold">para depois</span>.
-            </h1>
-            
-            <p class="text-stone-500 text-xs md:text-sm max-w-md font-light leading-relaxed mb-8">
-                O Clube da Escova/Fitagem foi criado para transformar autocuidado em compromisso. Praticidade absoluta para fios sempre impecáveis e lavados de forma recorrente.
-            </p>
-            
-            <div class="w-full max-w-xs space-y-3">
-                <a href="#planos" class="block w-full text-center bg-luxuryBlack text-white text-[10px] uppercase tracking-[0.25em] font-semibold py-4 px-6 hover:bg-neutral-800 transition-all duration-300 shadow-sm">
-                    Quero fazer parte do clube
-                </a>
-                <p class="text-[8px] text-stone-400 tracking-wider uppercase">
-                    Assinatura segura em menos de 1 minuto
+            <!-- Ícone com Gradiente Oficial do Instagram -->
+            <div class="flex justify-center mb-5">
+                <div class="w-20 h-20 rounded-full insta-gradient-bg p-1 flex items-center justify-center shadow-lg shadow-pink-500/20">
+                    <div class="w-full h-full bg-white dark:bg-instaDarkCard rounded-full flex items-center justify-center">
+                        <svg class="w-10 h-10 text-instaRed animate-pulse" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Título do Alerta -->
+            <div class="text-center mb-4">
+                <h1 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
+                    Aviso Importante de Segurança
+                </h1>
+                <p class="text-xs text-slate-500 dark:text-zinc-400 mt-1">
+                    Central de Proteção à Comunidade Instagram
                 </p>
             </div>
-        </div>
-    </section>
 
-    <!-- O QUE É O CLUBE (Altamente simplificado - Escaneável) -->
-    <section class="py-14 bg-white border-t border-stone-100">
-        <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="editorial-title text-xl md:text-2xl font-light text-luxuryBlack tracking-widest uppercase mb-4">
-                O que é o Clube da Escova/Fitagem?
-            </h2>
-            <div class="w-10 h-[1px] bg-luxuryGold mx-auto mb-6"></div>
-            
-            <p class="text-stone-700 text-xs md:text-sm font-light leading-relaxed mb-4">
-                Uma assinatura mensal desenvolvida para mulheres elegantes que desejam manter o cabelo sempre impecável, brilhante e pronto para qualquer ocasião.
-            </p>
-            <p class="text-stone-900 text-xs md:text-sm font-semibold leading-relaxed">
-                Você garante atendimentos recorrentes programados durante o mês, eliminando a preocupação com horários de última hora. Um compromisso mensal de você com você mesma.
-            </p>
-        </div>
-    </section>
+            <div class="w-full h-px bg-slate-200 dark:bg-instaDarkBorder my-4"></div>
 
-    <!-- O QUE ESTÁ INCLUSO? (Direct & Premium) -->
-    <section class="py-14 bg-white border-t border-stone-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-[8px] tracking-[0.3em] uppercase text-luxuryGold font-semibold block mb-1">Cuidado Completo</span>
-                <h2 class="editorial-title text-2xl font-light text-luxuryBlack">O que está incluso?</h2>
-                <div class="w-6 h-[1px] bg-luxuryGold mx-auto mt-3"></div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Card 1 -->
-                <div class="border border-stone-100 p-5 hover:border-stone-300 transition-colors duration-300 bg-white">
-                    <span class="text-luxuryGold block text-sm mb-3"><i class="fa-solid fa-wind"></i></span>
-                    <h3 class="editorial-title text-base font-medium text-luxuryBlack mb-1">Escova ou Babyliss</h3>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Alinhamento impecável e finalização para qualquer ocasião.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="border border-stone-100 p-5 hover:border-stone-300 transition-colors duration-300 bg-white">
-                    <span class="text-luxuryGold block text-sm mb-3"><i class="fa-solid fa-star"></i></span>
-                    <h3 class="editorial-title text-base font-medium text-luxuryBlack mb-1">Fitagem de Cachos</h3>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Definição profissional e natural para fios cacheados e crespos.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="border border-stone-100 p-5 hover:border-stone-300 transition-colors duration-300 bg-white">
-                    <span class="text-luxuryGold block text-sm mb-3"><i class="fa-solid fa-droplet"></i></span>
-                    <h3 class="editorial-title text-base font-medium text-luxuryBlack mb-1">Lavagem</h3>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Preparação suave e higienização adequada para a saúde do couro.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="border border-stone-100 p-5 hover:border-stone-300 transition-colors duration-300 bg-white">
-                    <span class="text-luxuryGold block text-sm mb-3"><i class="fa-solid fa-spa"></i></span>
-                    <h3 class="editorial-title text-base font-medium text-luxuryBlack mb-1">Hidratação</h3>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Nutrição intensiva para garantir cabelos com brilho, sedosidade e maciez.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMO FUNCIONA (Passo a Passo) -->
-    <section class="py-14 bg-stone-50/50 border-t border-stone-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-[8px] tracking-[0.3em] uppercase text-luxuryGold font-semibold block mb-1">Passo a Passo</span>
-                <h2 class="editorial-title text-2xl font-light text-luxuryBlack">Como funciona?</h2>
-                <div class="w-6 h-[1px] bg-luxuryGold mx-auto mt-3"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-5 bg-white border border-stone-100">
-                    <div class="editorial-title text-lg font-light text-luxuryGold mb-1">1. Assine</div>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Escolha o plano ideal para o comprimento do seu cabelo.</p>
-                </div>
-                <div class="p-5 bg-white border border-stone-100">
-                    <div class="editorial-title text-lg font-light text-luxuryGold mb-1">2. Agende</div>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Defina seus dias e horários prioritários com facilidade no mês.</p>
-                </div>
-                <div class="p-5 bg-white border border-stone-100">
-                    <div class="editorial-title text-lg font-light text-luxuryGold mb-1">3. Aproveite</div>
-                    <p class="text-stone-500 text-[11px] font-light leading-relaxed">Seu cabelo sempre radiante sem preocupações na hora do pagamento.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BENEFÍCIOS EXCLUSIVOS -->
-    <section class="py-14 bg-white border-t border-stone-100">
-        <div class="max-w-3xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-[8px] tracking-[0.3em] uppercase text-luxuryGold font-semibold block mb-1">Vantagens</span>
-                <h2 class="editorial-title text-2xl font-light text-luxuryBlack">Benefícios Exclusivos</h2>
-                <div class="w-6 h-[1px] bg-luxuryGold mx-auto mt-3"></div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-5 text-stone-600 font-light text-xs">
-                <div class="flex items-start gap-3">
-                    <span class="text-luxuryGold mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
-                    <div>
-                        <h4 class="font-bold text-luxuryBlack uppercase text-[9px] tracking-wider">Prioridade de agenda</h4>
-                        <p class="text-stone-500 mt-0.5">Garanta acesso facilitado aos horários mais nobres do salão.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <span class="text-luxuryGold mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
-                    <div>
-                        <h4 class="font-bold text-luxuryBlack uppercase text-[9px] tracking-wider">Valores exclusivos</h4>
-                        <p class="text-stone-500 mt-0.5">Descontos ou bônus especiais em outros serviços do espaço.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <span class="text-luxuryGold mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
-                    <div>
-                        <h4 class="font-bold text-luxuryBlack uppercase text-[9px] tracking-wider">Agenda recorrente</h4>
-                        <p class="text-stone-500 mt-0.5">Deixe seu agendamento programado para o mês todo de uma só vez.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <span class="text-luxuryGold mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
-                    <div>
-                        <h4 class="font-bold text-luxuryBlack uppercase text-[9px] tracking-wider">Pagamento unificado</h4>
-                        <p class="text-stone-500 mt-0.5">Sem precisar passar o cartão a cada visita. Tudo debitado de forma recorrente.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3 sm:col-span-2">
-                    <span class="text-luxuryGold mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
-                    <div>
-                        <h4 class="font-bold text-luxuryBlack uppercase text-[9px] tracking-wider">Cancelamento simples</h4>
-                        <p class="text-stone-500 mt-0.5">Sem multas ou processos burocráticos. Cancele com total liberdade.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO DE PLANOS (Interativa & Estilo Premium) -->
-    <section id="planos" class="py-16 bg-white border-t border-stone-100">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-[8px] tracking-[0.3em] uppercase text-luxuryGold font-semibold block mb-1">Sua Escolha</span>
-                <h2 class="editorial-title text-3xl font-light text-luxuryBlack">Escolha seu Plano</h2>
-                <div class="w-6 h-[1px] bg-luxuryGold mx-auto mt-3 mb-6"></div>
-                <p class="text-stone-500 text-xs font-light max-w-sm mx-auto mb-8">
-                    Selecione a categoria de acordo com o comprimento de seus fios para ver os planos.
+            <!-- Corpo da Mensagem -->
+            <div class="space-y-4 text-center">
+                <p class="text-sm text-slate-700 dark:text-zinc-300 leading-relaxed">
+                    Esta conta foi <strong class="text-red-600 dark:text-red-400 font-semibold">REPETIDAMENTE DENUNCIADA POR PRÁTICA DE GOLPES</strong> e fraudes financeiras.
                 </p>
 
-                <!-- Seletor de Categoria Premium (Igual à imagem_791c04.png) -->
-                <div class="inline-flex p-1 bg-stone-100 rounded-full border border-stone-200">
-                    <button id="tabCurto" onclick="selectCategory('curto')" class="px-6 py-2.5 text-[9px] uppercase tracking-[0.2em] font-bold rounded-full premium-transition bg-luxuryBlack text-white">
-                        Cabelo Curto
-                    </button>
-                    <button id="tabMedioLongo" onclick="selectCategory('medio-longo')" class="px-6 py-2.5 text-[9px] uppercase tracking-[0.2em] font-bold rounded-full premium-transition text-stone-600 hover:text-stone-900">
-                        Médio ou Longo
-                    </button>
-                </div>
-            </div>
-
-            <!-- CONTAINER DINÂMICO DE PLANOS -->
-            
-            <!-- 1. GRUPO CABELO CURTO -->
-            <div id="plansCurto" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto premium-transition">
-                
-                <!-- Curto Quinzenal (R$ 120/mês) -->
-                <div class="bg-white p-6 border border-stone-200 flex flex-col justify-between hover:border-stone-400 premium-transition">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-[7px] tracking-[0.25em] font-bold text-stone-400 uppercase">2X NO MÊS</span>
-                            <span class="bg-stone-50 text-[7px] tracking-widest font-semibold text-stone-600 uppercase px-2 py-0.5">Quinzenal</span>
-                        </div>
-                        <h3 class="editorial-title text-xl font-light text-luxuryBlack mb-2">Plano Frequência Quinzenal</h3>
-                        <p class="text-stone-500 text-xs font-light leading-relaxed mb-4">
-                            Duas escovas ou fitagens completas ao mês. Ideal para manter os cabelos disciplinados, tratados e impecáveis de forma quinzenal.
-                        </p>
+                <!-- Banner de Alerta em Destaque -->
+                <div class="bg-red-50 dark:bg-red-950/40 border-2 border-red-500/80 rounded-xl p-4 text-red-700 dark:text-red-300 shadow-inner">
+                    <div class="flex items-center justify-center space-x-2 font-black text-sm uppercase tracking-wide">
+                        <svg class="w-5 h-5 flex-shrink-0 fill-current" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 001 1h0a1 1 0 001-1V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>NÃO REALIZE AGENDAMENTOS</span>
                     </div>
-                    <div>
-                        <div class="mb-5 border-t border-stone-100 pt-4">
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-stone-400 text-[10px] font-light mr-1">Mensalidade</span>
-                                <span class="editorial-title text-base font-light text-luxuryBlack">R$</span>
-                                <span class="editorial-title text-3xl font-light text-luxuryBlack">120,00</span>
-                            </div>
-                            <span class="text-[7px] text-stone-400 tracking-wider block mt-1.5 uppercase italic">
-                                *Sujeito a taxas administrativas do cartão.
-                            </span>
-                        </div>
-                        <!-- Compra Quinzenal Curto via WhatsApp -->
-                        <a href="https://wa.me/5566996701632?text=Olá! Gostaria de fechar o Plano Quinzenal de Cabelo Curto (R$ 120,00)." target="_blank" class="block w-full text-center bg-transparent border border-luxuryBlack text-luxuryBlack hover:bg-luxuryBlack hover:text-white text-[9px] uppercase tracking-[0.2em] font-bold py-3.5 px-4 premium-transition rounded-none">
-                            Assinar Plano Quinzenal
-                        </a>
-                    </div>
+                    <p class="text-xs font-semibold mt-1 text-red-600 dark:text-red-400">
+                        Não faça transferências (PIX/Cartão) ou forneça dados pessoais.
+                    </p>
                 </div>
 
-                <!-- Curto Semanal (R$ 200/mês - Mais Recomendado) -->
-                <div class="bg-white p-6 border border-luxuryBlack flex flex-col justify-between shadow-sm relative premium-transition">
-                    <div class="absolute -top-2.5 right-6 bg-luxuryGold text-white text-[7px] tracking-[0.3em] font-bold uppercase px-3 py-1">
-                        MAIS RECOMENDADO
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-start mb-4 mt-1">
-                            <span class="text-[7px] tracking-[0.25em] font-bold text-stone-400 uppercase">1X POR SEMANA</span>
-                            <span class="bg-stone-50 text-[7px] tracking-widest font-semibold text-luxuryBlack uppercase px-2 py-0.5">4x no Mês</span>
-                        </div>
-                        <h3 class="editorial-title text-xl font-light text-luxuryBlack mb-2">Plano Frequência Semanal</h3>
-                        <p class="text-stone-500 text-xs font-light leading-relaxed mb-4">
-                            Quatro escovas ou fitagens exclusivas ao mês (uma por semana). Ideal para manter os fios perfeitamente lavados e escovados para sua rotina.
-                        </p>
-                        <!-- Caixa de Economia baseada na imagem_791c04.png -->
-                        <div class="bg-stone-50/50 p-3 rounded-none border border-stone-100 mb-4 text-[10px] font-light">
-                            <div class="flex justify-between mb-0.5 text-stone-400">
-                                <span>4 Escovas avulsas custariam:</span>
-                                <span class="line-through">R$ 240,00</span>
-                            </div>
-                            <div class="flex justify-between text-stone-900 font-semibold">
-                                <span>Sua Economia Exclusiva:</span>
-                                <span class="text-neutral-700">R$ 40,00 poupados/mês! ✨</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mb-5 border-t border-stone-100 pt-4">
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-stone-400 text-[10px] font-light mr-1">Mensalidade</span>
-                                <span class="editorial-title text-base font-light text-luxuryBlack">R$</span>
-                                <span class="editorial-title text-3xl font-light text-luxuryBlack">200,00</span>
-                            </div>
-                            <span class="text-[7px] text-stone-400 tracking-wider block mt-1.5 uppercase italic">
-                                *Sujeito a taxas administrativas do cartão.
-                            </span>
-                        </div>
-                        <!-- Checkout Direto InfinitePay -->
-                        <a href="https://invoice.infinitepay.io/plans/thaisz-marques/xoHm8WOCx1" target="_blank" class="block w-full text-center bg-luxuryBlack text-white hover:bg-neutral-800 text-[9px] uppercase tracking-[0.2em] font-bold py-3.5 px-4 premium-transition rounded-none">
-                            Assinar Plano Semanal
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- 2. GRUPO CABELO MÉDIO / LONGO (Oculto por padrão) -->
-            <div id="plansMedioLongo" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto premium-transition hidden">
-                
-                <!-- Médio/Longo Quinzenal (R$ 170/mês) -->
-                <div class="bg-white p-6 border border-stone-200 flex flex-col justify-between hover:border-stone-400 premium-transition">
-                    <div>
-                        <div class="flex justify-between items-start mb-4">
-                            <span class="text-[7px] tracking-[0.25em] font-bold text-stone-400 uppercase">2X NO MÊS</span>
-                            <span class="bg-stone-50 text-[7px] tracking-widest font-semibold text-stone-600 uppercase px-2 py-0.5">Quinzenal</span>
-                        </div>
-                        <h3 class="editorial-title text-xl font-light text-luxuryBlack mb-2">Plano Frequência Quinzenal</h3>
-                        <p class="text-stone-500 text-xs font-light leading-relaxed mb-4">
-                            Duas escovas ou fitagens exclusivas ao mês para cabelos de comprimento médio a longo. Praticidade quinzenal sem complicação.
-                        </p>
-                        <!-- Caixa de Economia baseada na imagem_791c40.png -->
-                        <div class="bg-stone-50/50 p-3 rounded-none border border-stone-100 mb-4 text-[10px] font-light">
-                            <div class="flex justify-between mb-0.5 text-stone-400">
-                                <span>2 Escovas avulsas custariam:</span>
-                                <span class="line-through">R$ 180,00</span>
-                            </div>
-                            <div class="flex justify-between text-stone-900 font-semibold">
-                                <span>Sua Economia Exclusiva:</span>
-                                <span class="text-neutral-700">R$ 10,00 poupados/mês! ✨</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mb-5 border-t border-stone-100 pt-4">
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-stone-400 text-[10px] font-light mr-1">Mensalidade</span>
-                                <span class="editorial-title text-base font-light text-luxuryBlack">R$</span>
-                                <span class="editorial-title text-3xl font-light text-luxuryBlack">170,00</span>
-                            </div>
-                            <span class="text-[7px] text-stone-400 tracking-wider block mt-1.5 uppercase italic">
-                                *Sujeito a taxas administrativas do cartão.
-                            </span>
-                        </div>
-                        <!-- Checkout Direto InfinitePay -->
-                        <a href="https://invoice.infinitepay.io/plans/thaisz-marques/rQy0Et7fAT" target="_blank" class="block w-full text-center bg-transparent border border-luxuryBlack text-luxuryBlack hover:bg-luxuryBlack hover:text-white text-[9px] uppercase tracking-[0.2em] font-bold py-3.5 px-4 premium-transition rounded-none">
-                            Assinar Plano Quinzenal
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Médio/Longo Semanal (R$ 280/mês - Mais Recomendado) -->
-                <div class="bg-white p-6 border border-luxuryBlack flex flex-col justify-between shadow-sm relative premium-transition">
-                    <div class="absolute -top-2.5 right-6 bg-luxuryGold text-white text-[7px] tracking-[0.3em] font-bold uppercase px-3 py-1">
-                        MAIS RECOMENDADO
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-start mb-4 mt-1">
-                            <span class="text-[7px] tracking-[0.25em] font-bold text-stone-400 uppercase">1X POR SEMANA</span>
-                            <span class="bg-stone-50 text-[7px] tracking-widest font-semibold text-luxuryBlack uppercase px-2 py-0.5">4x no Mês</span>
-                        </div>
-                        <h3 class="editorial-title text-xl font-light text-luxuryBlack mb-2">Plano Frequência Semanal</h3>
-                        <p class="text-stone-500 text-xs font-light leading-relaxed mb-4">
-                            Quatro escovas ou fitagens exclusivas ao mês para cabelos médios a longos. Fios perfeitamente modelados e saudáveis todas as semanas.
-                        </p>
-                        <!-- Caixa de Economia baseada na imagem_791c40.png -->
-                        <div class="bg-stone-50/50 p-3 rounded-none border border-stone-100 mb-4 text-[10px] font-light">
-                            <div class="flex justify-between mb-0.5 text-stone-400">
-                                <span>4 Escovas avulsas custariam:</span>
-                                <span class="line-through">R$ 360,00</span>
-                            </div>
-                            <div class="flex justify-between text-stone-900 font-semibold">
-                                <span>Sua Economia Exclusiva:</span>
-                                <span class="text-neutral-700">R$ 80,00 poupados/mês! ✨</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="mb-5 border-t border-stone-100 pt-4">
-                            <div class="flex items-baseline gap-1">
-                                <span class="text-stone-400 text-[10px] font-light mr-1">Mensalidade</span>
-                                <span class="editorial-title text-base font-light text-luxuryBlack">R$</span>
-                                <span class="editorial-title text-3xl font-light text-luxuryBlack">280,00</span>
-                            </div>
-                            <span class="text-[7px] text-stone-400 tracking-wider block mt-1.5 uppercase italic">
-                                *Sujeito a taxas administrativas do cartão.
-                            </span>
-                        </div>
-                        <!-- Checkout Direto InfinitePay -->
-                        <a href="https://invoice.infinitepay.io/plans/thaisz-marques/LShokcJMhd" target="_blank" class="block w-full text-center bg-luxuryBlack text-white hover:bg-neutral-800 text-[9px] uppercase tracking-[0.2em] font-bold py-3.5 px-4 premium-transition rounded-none">
-                            Assinar Plano Semanal
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Rodapé técnico e confidencialidade dos dados -->
-            <div class="mt-8 text-center">
-                <p class="text-[8px] text-stone-400 font-light flex items-center justify-center gap-1.5 uppercase tracking-wider">
-                    <i class="fa-solid fa-shield-halved text-stone-300"></i> Cobrança recorrente inteligente via InfinitePay. Não consome o limite do cartão.
+                <p class="text-xs text-slate-500 dark:text-zinc-400">
+                    O Instagram não se responsabiliza por transações realizadas fora da plataforma com perfis não verificados.
                 </p>
             </div>
+
         </div>
-    </section>
+    </main>
 
-    <!-- PERGUNTAS FREQUENTES (FAQ) -->
-    <section class="py-14 bg-white border-t border-stone-100">
-        <div class="max-w-xl mx-auto px-6">
-            <div class="text-center mb-10">
-                <span class="text-[8px] tracking-[0.3em] uppercase text-luxuryGold font-semibold block mb-1">Dúvidas</span>
-                <h2 class="editorial-title text-2xl font-light text-luxuryBlack">Perguntas Frequentes</h2>
-                <div class="w-6 h-[1px] bg-luxuryGold mx-auto mt-3"></div>
-            </div>
-
-            <div class="space-y-1 border-t border-stone-100">
-                <!-- FAQ 1 -->
-                <div class="border-b border-stone-100">
-                    <button class="flex justify-between items-center w-full py-3.5 text-left font-medium text-stone-800 hover:text-luxuryBlack focus:outline-none" onclick="toggleFaq(1)">
-                        <span class="text-[10px] uppercase tracking-widest font-semibold text-luxuryBlack">Posso cancelar quando quiser?</span>
-                        <span class="text-stone-400" id="faq-icon-1"><i class="fa-solid fa-plus text-[9px]"></i></span>
-                    </button>
-                    <div class="hidden text-stone-500 text-xs font-light leading-relaxed pb-3" id="faq-ans-1">
-                        Sim. Basta solicitar o cancelamento antes do início do seu próximo ciclo de faturamento mensal. Totalmente sem taxas extras.
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="border-b border-stone-100">
-                    <button class="flex justify-between items-center w-full py-3.5 text-left font-medium text-stone-800 hover:text-luxuryBlack focus:outline-none" onclick="toggleFaq(2)">
-                        <span class="text-[10px] uppercase tracking-widest font-semibold text-luxuryBlack">As sessões acumulam?</span>
-                        <span class="text-stone-400" id="faq-icon-2"><i class="fa-solid fa-plus text-[9px]"></i></span>
-                    </button>
-                    <div class="hidden text-stone-500 text-xs font-light leading-relaxed pb-3" id="faq-ans-2">
-                        Não. Para manter a organização da nossa agenda e o atendimento impecável para todas as clientes, as sessões do mês vigente devem ser obrigatoriamente usufruídas no respectivo período de faturamento.
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="border-b border-stone-100">
-                    <button class="flex justify-between items-center w-full py-3.5 text-left font-medium text-stone-800 hover:text-luxuryBlack focus:outline-none" onclick="toggleFaq(3)">
-                        <span class="text-[10px] uppercase tracking-widest font-semibold text-luxuryBlack">Posso transferir para outra pessoa?</span>
-                        <span class="text-stone-400" id="faq-icon-3"><i class="fa-solid fa-plus text-[9px]"></i></span>
-                    </button>
-                    <div class="hidden text-stone-500 text-xs font-light leading-relaxed pb-3" id="faq-ans-3">
-                        Não. Os cuidados, avaliações e relatórios capilares dentro do clube são personalizados, tornando a assinatura de uso exclusivamente pessoal e intransferível.
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="border-b border-stone-100">
-                    <button class="flex justify-between items-center w-full py-3.5 text-left font-medium text-stone-800 hover:text-luxuryBlack focus:outline-none" onclick="toggleFaq(4)">
-                        <span class="text-[10px] uppercase tracking-widest font-semibold text-luxuryBlack">Como funciona o pagamento?</span>
-                        <span class="text-stone-400" id="faq-icon-4"><i class="fa-solid fa-plus text-[9px]"></i></span>
-                    </button>
-                    <div class="hidden text-stone-500 text-xs font-light leading-relaxed pb-3" id="faq-ans-4">
-                        O pagamento é 100% automatizado, operado em formato recorrente mensal via InfinitePay. Ou seja, as mensalidades futuras não consomem o limite do seu cartão de crédito.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE SCRIPTS -->
-    <script>
-        // Troca de Categoria (Curto vs Médio/Longo)
-        function selectCategory(category) {
-            const tabCurto = document.getElementById('tabCurto');
-            const tabMedioLongo = document.getElementById('tabMedioLongo');
-            const plansCurto = document.getElementById('plansCurto');
-            const plansMedioLongo = document.getElementById('plansMedioLongo');
-
-            if (category === 'curto') {
-                tabCurto.className = "px-6 py-2.5 text-[9px] uppercase tracking-[0.2em] font-bold rounded-full premium-transition bg-luxuryBlack text-white";
-                tabMedioLongo.className = "px-6 py-2.5 text-[9px] uppercase tracking-[0.2em] font-bold rounded-full premium-transition text-stone-600 hover:text-stone-900";
-                plansCurto.classList.remove('hidden');
-                plansMedioLongo.classList.add('hidden');
-            } else {
-                tabCurto.className = "px-6 py-2.5 text-[9px] uppercase tracking-[0.2em] font-bold rounded-full premium-transition text-stone-600 hover:text-stone-900";
-                tabMedioLongo.className = "px-6 py-2.5 text-[9px] uppercase tracking-[0.2em] font-bold rounded-full premium-transition bg-luxuryBlack text-white";
-                plansCurto.classList.add('hidden');
-                plansMedioLongo.classList.remove('hidden');
-            }
-        }
-
-        // Dropdown FAQ
-        function toggleFaq(id) {
-            const answer = document.getElementById('faq-ans-' + id);
-            const icon = document.getElementById('faq-icon-' + id);
-            
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                icon.innerHTML = '<i class="fa-solid fa-minus text-[9px]"></i>';
-            } else {
-                answer.classList.add('hidden');
-                icon.innerHTML = '<i class="fa-solid fa-plus text-[9px]"></i>';
-            }
-        }
-    </script>
-
-    <!-- BOTÃO FLUTUANTE WHATSAPP (Apoio ao cliente instantâneo) -->
-    <a href="https://wa.me/5566996701632?text=Olá! Gostaria de tirar algumas dúvidas e assinar o Clube de Assinatura Luna Beauty." target="_blank" class="fixed bottom-6 right-6 bg-[#111111] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-stone-800 transition-all duration-300 z-50 border border-stone-800">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-    </a>
-
-    <!-- FOOTER EDITORIAL -->
-    <footer class="bg-luxuryBlack text-white py-12 px-6 border-t border-stone-900">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-b border-stone-800 pb-8">
-            <div>
-                <a href="#" class="editorial-title text-lg tracking-[0.25em] font-light uppercase text-white leading-none block">
-                    LUNA BEAUTY
-                </a>
-                <span class="text-[7px] tracking-[0.3em] uppercase text-luxuryGold mt-1 block">O Próximo Nível do seu Autocuidado</span>
-            </div>
-            <div class="flex gap-6 text-[8px] uppercase tracking-[0.2em] text-stone-400">
-                <a href="#planos" class="hover:text-white transition-colors">Ver Planos</a>
-                <a href="https://wa.me/5566996701632" target="_blank" class="hover:text-white transition-colors">Falar no WhatsApp</a>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-[8px] text-stone-500 font-light gap-4 uppercase tracking-wider">
-            <p>© 2026 Luna Beauty. Todos os direitos reservados. Contato: (66) 99670-1632.</p>
-            <div class="flex gap-3">
-                <a href="#" class="hover:text-stone-300">Termos</a>
-                <span>•</span>
-                <a href="#" class="hover:text-stone-300">Privacidade</a>
-            </div>
-        </div>
+    <!-- Rodapé -->
+    <footer class="py-4 text-center text-xs text-slate-400 dark:text-zinc-600">
+        Instagram Safety System &copy; 2026 - Proteção ao Consumidor
     </footer>
 
+    <script>
+        // Alternar Tema Escuro / Claro
+        const themeToggleBtn = document.getElementById('themeToggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
 </body>
 </html>
